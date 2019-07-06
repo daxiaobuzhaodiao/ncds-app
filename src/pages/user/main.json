@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "主页",
+    "usingComponents": {
+        "van-button": "/static/vant-weapp/dist/button/index",
+        "van-dialog": "/static/vant-weapp/dist/dialog/index"
+    }
+}   
