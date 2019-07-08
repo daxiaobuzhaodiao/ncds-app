@@ -13,7 +13,7 @@ export default {
     getUserInfo(e) {
       console.log(e.mp.detail.userInfo);
       this.$store.dispatch("setIsAuthenticated", true);
-      this.$store.dispatch("setUser", e.mp.detail.userInfo);
+      // this.$store.dispatch("setUser", e.mp.detail.userInfo);
       this.getCode();
     },
     getCode() {
