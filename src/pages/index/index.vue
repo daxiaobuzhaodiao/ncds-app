@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import Dialog from "~/vant-weapp/dist/dialog/dialog";
 export default {
   data() {
     return {};
