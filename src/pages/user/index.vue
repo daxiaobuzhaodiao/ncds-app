@@ -1,11 +1,15 @@
 <template>
-    <div>
-        <h1>hello</h1>
-    </div>
+    <view class="user">
+        
+    </view>
 </template>
 <script>
 export default {
-    
+    data() {
+        return {
+            
+        }
+    }
 }
 </script>
 <style>
