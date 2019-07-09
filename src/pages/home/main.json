@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "主页",
+    "usingComponents": {
+        "van-tab": "/static/vant-weapp/dist/tab/index",
+        "van-tabs": "/static/vant-weapp/dist/tabs/index",
+        "van-collapse": "/static/vant-weapp/dist/collapse/index",
+        "van-collapse-item": "/static/vant-weapp/dist/collapse-item/index",
+        "van-tag": "/static/vant-weapp/dist/tag/index",
+        "van-icon": "/static/vant-weapp/dist/icon/index"
+
+    }
+}
