@@ -11,48 +11,28 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#999",
+    "color": "#333333",
     "backgroundColor": "#fafafa",
-    "selectedColor": "#333",
+    "selectedColor": "#1296db",
     "borderStyle": "white",
     "list": [
       {
-        "text": "我的",
+        "text": "用户",
         "pagePath": "pages/home/main",
-        "iconPath": "static/tabs/home.png",
-        "selectedIconPath": "static/tabs/home-active.png"
+        "iconPath": "static/tabs/user.png",
+        "selectedIconPath": "static/tabs/user-active.png"
       },
       {
         "text": "首页",
         "pagePath": "pages/index/main",
-        "iconPath": "static/tabs/home.png",
-        "selectedIconPath": "static/tabs/home-active.png"
+        "iconPath": "static/tabs/index.png",
+        "selectedIconPath": "static/tabs/index-active.png"
       },
-      {
-        "text": "订单",
-        "pagePath": "pages/user/main",
-        "iconPath": "static/tabs/orders.png",
-        "selectedIconPath": "static/tabs/orders-active.png"
-      }
-    ],
-    "items": [
       {
         "text": "我的",
-        "pagePath": "pages/home/main",
+        "pagePath": "pages/user/main",
         "iconPath": "static/tabs/home.png",
         "selectedIconPath": "static/tabs/home-active.png"
-      },
-      {
-        "name": "首页",
-        "pagePath": "pages/index/main",
-        "icon": "static/tabs/home.png",
-        "activeIcon": "static/tabs/home-active.png"
-      },
-      {
-        "name": "订单",
-        "pagePath": "pages/user/main",
-        "icon": "static/tabs/orders.png",
-        "activeIcon": "static/tabs/orders-active.png"
       }
     ],
     "position": "bottom"

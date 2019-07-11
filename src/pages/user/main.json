@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "主页",
+    "navigationBarTitleText": "我的",
     "usingComponents": {
         "van-button": "/static/vant-weapp/dist/button/index",
         "van-dialog": "/static/vant-weapp/dist/dialog/index",

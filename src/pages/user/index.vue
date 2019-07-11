@@ -24,7 +24,7 @@
       </van-dialog>
       <van-row>
         <van-col custom-class="d1" span="12">
-          <span v-if="islogin==false" @click="dia">登陆/注册</span>
+          <span class="color" v-if="islogin==false" @click="dia">登陆/注册</span>
           <span v-else>{{userInfo.nickName}}</span>
         </van-col>
         <van-col span="12">
@@ -72,6 +72,9 @@ export default {
 };
 </script>
 <style>
+.user .d1 .color {
+  font-size: 28px;
+}
 .bg {
   height: 150px;
   background-color: #aaccdd;
