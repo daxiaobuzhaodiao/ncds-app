@@ -12,13 +12,14 @@
         <van-button
           open-type="getUserInfo"
           @getuserinfo="getUserInfo"
-          custom-class="s1"
+          custom-class="s"
           block="true"
           type="primary"
+          size="small"
         >
           <van-icon class="icon" size="13px" name="chat" />微信登陆
         </van-button>
-        <van-button custom-class="s1" block="true" type="info">
+        <van-button custom-class="s1" block="true" type="info" size="small">
           <van-icon class="icon" size="13px" name="phone" />手机登陆
         </van-button>
       </van-dialog>
@@ -50,7 +51,8 @@ export default {
       islogin: false,
       show: false,
       test: false,
-      userInfo: ""
+      userInfo: "",
+      active: 0
     };
   },
   methods: {
@@ -67,7 +69,9 @@ export default {
 
     onClose() {
       this.show = false;
-    }
+    },
+
+    
   }
 };
 </script>
@@ -94,9 +98,16 @@ image {
   margin-right: 5px;
   margin-top: 5px;
 }
-.user .s1 {
-  margin-top: 5px;
+.user .s {
+  margin-top: 15px;
   margin-bottom: 10px;
   width: 80%;
+  border-radius: 7px;
+}
+
+.user .s1 {
+  margin-bottom: 30px;
+  width: 80%;
+  border-radius: 7px;
 }
 </style>

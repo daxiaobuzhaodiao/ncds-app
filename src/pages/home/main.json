@@ -9,6 +9,9 @@
         "van-tag": "/static/vant-weapp/dist/tag/index",
         "van-icon": "/static/vant-weapp/dist/icon/index",
         "van-row": "/static/vant-weapp/dist/row/index",
-        "van-col": "/static/vant-weapp/dist/col/index"
+        "van-col": "/static/vant-weapp/dist/col/index",
+        "van-dialog": "/static/vant-weapp/dist/dialog/index",
+        "van-tabbar": "/static/vant-weapp/dist/tabbar/index",
+        "van-tabbar-item": "/static/vant-weapp/dist/tabbar-item/index"
     }
 }

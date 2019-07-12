@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <van-tabs :active="active">
+    
+
+    <van-tabs :active="tabActive">
       <van-tab index title="医嘱任务">
         <van-collapse :value="activeName" @change="onChange" accordion>
           <van-collapse-item content-class="pdd" name="1">
@@ -177,7 +179,8 @@
             <view slot="title">
               每天血压测量和记录
               <van-tag round type="primary">20</van-tag>
-            </view>内容
+            </view>
+            <van-button type="default" round="true">测量和记录早上血压(7:00~10:00)</van-button>
           </van-collapse-item>
           <van-collapse-item title="每天血糖测量和记录" name="2">吃完药后不得喝酒，早睡早起</van-collapse-item>
           <van-collapse-item title="每天运动记录" name="3">吃完药后不得喝酒，早睡早起</van-collapse-item>
@@ -202,7 +205,7 @@
 export default {
   data() {
     return {
-      active: 1,
+      tabActive: 1,
       activeName: "1",
       xiaoyuhao: "<"
     };
@@ -210,7 +213,8 @@ export default {
   methods: {
     onChange(event) {
       this.activeName = event.mp.detail;
-    }
+    },
+    
   }
 };
 </script>
@@ -243,7 +247,7 @@ export default {
   letter-spacing: 2px;
 }
 
-.home .recipes .suggest{
+.home .recipes .suggest {
   border-bottom: 1px solid #aaa;
 }
 
