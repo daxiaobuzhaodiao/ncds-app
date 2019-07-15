@@ -1,9 +1,7 @@
 <template>
   <div class="home">
-    
-
     <van-tabs :active="tabActive">
-      <van-tab index title="医嘱任务">
+      <van-tab tab-class="color" title="医嘱任务">
         <van-collapse :value="activeName" @change="onChange" accordion>
           <van-collapse-item content-class="pdd" name="1">
             <view slot="title">
@@ -69,7 +67,7 @@
           <van-collapse-item title="嘱托类医嘱" name="2">吃完药后不得喝酒，早睡早起</van-collapse-item>
         </van-collapse>
       </van-tab>
-      <van-tab index title="推荐食谱" class="recipes">
+      <van-tab tab-class="color" title="推荐食谱" class="recipes">
         <view class="recipes-title">饮食健康</view>
         <ul class="advice">
           <li>1.请您记住一定要保持低钠优质低蛋白饮食。</li>
@@ -173,7 +171,7 @@
           <li>以上为营养治疗饮食方案建议，请遵医嘱定期复查、进行营养评估并根据结果做相应的方案的调整。</li>
         </ul>
       </van-tab>
-      <van-tab index title="健康任务">
+      <van-tab tab-class="color" title="健康任务" class="health">
         <van-collapse :value="activeName" @change="onChange" accordion>
           <van-collapse-item name="1">
             <view slot="title">
@@ -182,18 +180,60 @@
             </view>
             <van-button type="default" round="true">测量和记录早上血压(7:00~10:00)</van-button>
           </van-collapse-item>
-          <van-collapse-item title="每天血糖测量和记录" name="2">吃完药后不得喝酒，早睡早起</van-collapse-item>
-          <van-collapse-item title="每天运动记录" name="3">吃完药后不得喝酒，早睡早起</van-collapse-item>
+          <van-collapse-item title="每天血糖测量和记录" name="2">
+            <van-row>
+              <van-col custom-class="td" span="7">测量阶段</van-col>
+              <van-col custom-class="td" span="7">血糖(mmol/L)</van-col>
+              <van-col custom-class="td" span="10">参考范围(mmol/L)</van-col>
+            </van-row>
+            <van-row>
+              <van-col custom-class="td" span="7">空腹</van-col>
+              <van-col custom-class="td" span="7">4</van-col>
+              <van-col custom-class="td" span="10">3.89~6.1</van-col>
+            </van-row>
+            <van-row>
+              <van-col custom-class="td" span="7">餐后1小时</van-col>
+              <van-col custom-class="td" span="7">8</van-col>
+              <van-col custom-class="td" span="10">6.7~9.4</van-col>
+            </van-row>
+            <van-row>
+              <van-col custom-class="td" span="7">餐后2小时</van-col>
+              <van-col custom-class="td" span="7">7.1</van-col>
+              <van-col custom-class="td" span="10">≤7.8</van-col>
+            </van-row>
+          </van-collapse-item>
+          <van-collapse-item title="每天运动记录" name="3">
+            <van-row>
+              <van-col custom-class="td" span="8">运动项目</van-col>
+              <van-col custom-class="td" span="8">运动时常</van-col>
+              <van-col custom-class="td" span="8">完成状态</van-col>
+            </van-row>
+            <van-row>
+              <van-col custom-class="td" span="8">步行</van-col>
+              <van-col custom-class="td" span="8">1h</van-col>
+              <van-col custom-class="td" span="8">已完成</van-col>
+            </van-row>
+            <van-row>
+              <van-col custom-class="td" span="8">慢跑</van-col>
+              <van-col custom-class="td" span="8">0.5h</van-col>
+              <van-col custom-class="td" span="8">已完成</van-col>
+            </van-row>
+            <van-row>
+              <van-col custom-class="td" span="8">打太极</van-col>
+              <van-col custom-class="td" span="8">0.5h</van-col>
+              <van-col custom-class="td" span="8">已完成</van-col>
+            </van-row>
+          </van-collapse-item>
         </van-collapse>
       </van-tab>
-      <van-tab index title="行程提醒">
+      <van-tab tab-class="color" title="行程提醒">
         <view class="mm">下次本院复诊时间</view>
         <hr />
         <view class="mm">2019年5月11号</view>
         <hr />
         <view class="mm">
           <h2>距今天还有</h2>
-          <h1 style="margin-top:1rem; margin-bottom:1rem; font-size:3rem">14</h1>
+          <h1 class="mmm" style>14</h1>
           <h2>天</h2>
         </view>
       </van-tab>
@@ -213,8 +253,7 @@ export default {
   methods: {
     onChange(event) {
       this.activeName = event.mp.detail;
-    },
-    
+    }
   }
 };
 </script>
@@ -224,6 +263,10 @@ export default {
   font-size: 18px;
   margin: 10px 5px;
   letter-spacing: 3px;
+}
+
+.changeColor .color {
+  background: lightgreen;
 }
 
 .home .recipes .classify {
@@ -274,6 +317,17 @@ export default {
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
 }
+
+.mm h2 {
+  font-size: 25px;
+}
+
+.mm .mmm {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 80px;
+}
+
 hr {
   height: 3px;
   margin: 10px 0;
@@ -290,7 +344,9 @@ hr {
   margin-bottom: 15px;
 }
 .td {
-  border: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
   text-align: center;
   height: 20px;
   font-size: 12px;
@@ -298,7 +354,9 @@ hr {
   letter-spacing: 3px;
 }
 .tdd {
-  border: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
   text-align: center;
   height: 35px;
   font-size: 12px;
