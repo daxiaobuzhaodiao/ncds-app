@@ -265,10 +265,6 @@ export default {
   letter-spacing: 3px;
 }
 
-.changeColor .color {
-  background: lightgreen;
-}
-
 .home .recipes .classify {
   font-size: 18px;
   text-align: center;
