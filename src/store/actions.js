@@ -9,3 +9,7 @@ export const setUser = ({ commit }, data) => {
 export const setOpenId = ({ commit }, data) => {
   commit("setOpenId", data);
 };
+
+export const setPatient = ({ commit }, data) => {
+  commit("setPatient", data);
+};

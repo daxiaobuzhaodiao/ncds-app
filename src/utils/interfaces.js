@@ -1,7 +1,10 @@
-const domain = 'http://ncds.test/api/';
+const domain = 'http://ncds.local.test/weapi/';
 const interfaces = {
-  // 获取openID的接口
-  getOpenId: domain + 'authorization',
+  // 携带手机号请求验证码
+  getCode: domain + 'verificationPhone',
+  // 微信登录
+  welogin: domain + 'welogin',
+  
   
 };
 

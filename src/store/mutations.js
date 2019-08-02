@@ -9,3 +9,7 @@ export const setUser = (state, data) => {
 export const setOpenId = (state, data) => {
     state.openId = data
 }
+
+export const setPatient = (state, data) => {
+    state.patient = data
+}

@@ -250,6 +250,11 @@ export default {
       xiaoyuhao: "<"
     };
   },
+  onShow() {
+    this.$root.$mp.page.getTabBar().setData({
+      activeIndex: 1 //对应页面的index
+    });
+  },
   methods: {
     onChange(event) {
       this.activeName = event.mp.detail;

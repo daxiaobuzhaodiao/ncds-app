@@ -10,7 +10,8 @@ const state = {
     isAuthenticated: false,
     user: null,
     openId: '',
-    access_token: ''
+    access_token: '',
+    patient: null
 }
 
 export default new Vuex.Store({

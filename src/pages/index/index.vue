@@ -76,6 +76,13 @@ export default {
       columns: ["早上", "中午", "下午", "晚上"]
     };
   },
+
+  // 页面显示
+  onShow() {
+    this.$root.$mp.page.getTabBar().setData({
+      activeIndex: 2 //对应页面的index
+    });
+  },
   methods: {
     dia() {
       this.show = true;
